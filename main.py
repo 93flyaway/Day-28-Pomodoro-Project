@@ -62,6 +62,8 @@ def count_down(count):
         timer = window.after(1000, count_down, count - 1)
     elif count == 0:
         window.after(1000, start_timer)
+        window.attributes('-topmost', 1)
+        window.attributes('-topmost', 0)
         if reps % 2 != 0:
             checks = ""
             for n in range(int((reps + 1) / 2)):
